@@ -32,10 +32,10 @@ class Cell:
             for i in range(division_without_remainder):
                 add_to_list = "*" * cell_row + "\n"
                 list_of_cells_in_a_row.append(add_to_list)
-        return f'{"количество ячеек по рядам"} {list_of_cells_in_a_row}'
+        return list_of_cells_in_a_row
 
 
 cell_1 = Cell(30)    # количество ячеек в первой клетке
 cell_2 = Cell(10)    # количество ячеек во второй клетке
 print(cell_1 + cell_2)    # тут пишем любое математическое из: //, *, -, +
-print(cell_1.make_order(7))    # задаём количество ячеек в ряду
+print("Ряды ячеек в клетке: ", "\n", *cell_1.make_order(7), sep='')    # задаём количество ячеек в ряду
